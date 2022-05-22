@@ -9,11 +9,29 @@ namespace Work3
             Console.WriteLine("Введите число:");
             int numb = int.Parse(Console.ReadLine());
             bool n = true;
-
-            while (true)
+            int i = 2;
+            while (i <= numb-1)
             {
-
+                
+                if (numb % i == 0)
+                {
+                    n = false;
+                    break;
+                }
+                else
+                {
+                    i++;
+                }
             }
+            if (n == true)
+            {
+                Console.WriteLine("Число простое");
+            }
+            else
+            {
+                Console.WriteLine("Число составное");
+            }
+            Console.ReadKey();
         }
     }
 }
