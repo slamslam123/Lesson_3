@@ -22,39 +22,16 @@ namespace Work2
                     case "T":
                         sum = sum + 10;
                         break;
-                    case "1":
-                        sum = sum + 1;
-                        break;
-                    case "2":
-                        sum = sum + 2;
-                        break;
-                    case "3":
-                        sum = sum + 3;
-                        break;
-                    case "4":
-                        sum = sum + 4;
-                        break;
-                    case "5":
-                        sum = sum + 5;
-                        break;
-                    case "6":
-                        sum = sum + 6;
-                        break;
-                    case "7":
-                        sum = sum + 7;
-                        break;
-                    case "8":
-                        sum = sum + 8;
-                        break;
-                    case "9":
-                        sum = sum + 9;
-                        break;
-                    case "10":
-                        sum = sum + 10;
-                        break;
                     default:
-                        i--;
-                        Console.WriteLine("Номинал карты введен не корректно");
+                        int num = 0;
+                        bool parseOK = int.TryParse(nominal, out num);
+                        if (parseOK)
+                            sum += num;
+                        else
+                        {
+                            i--;
+                            Console.WriteLine("Номинал карты введен не корректно");
+                        }
                         break;
                 }
             }

@@ -10,9 +10,8 @@ namespace Work3
             int numb = int.Parse(Console.ReadLine());
             bool n = true;
             int i = 2;
-            while (i <= numb-1)
-            {
-                
+            while (i <= Math.Sqrt(numb))
+            { 
                 if (numb % i == 0)
                 {
                     n = false;
